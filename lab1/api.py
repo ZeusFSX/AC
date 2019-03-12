@@ -31,11 +31,22 @@ def make_public_task(task):
 
 @app.route("/api/v0.1/measurements", methods=["GET"])
 def get_measurements():
+    """
+    This function return all measurements
+    :return: json with measurements
+    """
     return jsonify({"measurements": [i for i in map(make_public_task, measurements)]})
 
 
 @app.route("/api/v0.1/measurement/<int:measurement_id>", methods=["GET"])
 def get_measurement(measurement_id):
+    """
+    This function return measurement by id
+    First find a measurement make uri for id
+    and return json
+    :param measurement_id: id
+    :return: json
+    """
     elem = list(filter(lambda t: t['id'] == measurement_id, measurements))
     if len(elem) == 0:
         return jsonify({"error": "not found"}, 404)
@@ -44,6 +55,10 @@ def get_measurement(measurement_id):
 
 @app.route("/api/v0.1/measurements", methods=["POST"])
 def add_measurement():
+    """
+    This function add new measurement in db
+    :return: json with the measurement
+    """
     if "diastolic" and "systolic" not in request.json:
         return jsonify({"error": "not found"}, 404)
 
@@ -59,6 +74,11 @@ def add_measurement():
 
 @app.route("/api/v0.1/measurement/<int:measurement_id>", methods=["PUT"])
 def edit_measurement(measurement_id):
+    """
+    Edit measurement by id use
+    :param measurement_id: id of element measurement
+    :return: json with the measurement which was edit
+    """
     elem = list(filter(lambda t: t['id'] == measurement_id, measurements))
     if len(elem) == 0:
         return jsonify({"error": "not found"}), 404
@@ -72,6 +92,11 @@ def edit_measurement(measurement_id):
 
 @app.route("/api/v0.1/measurement/<int:measurement_id>", methods=["DELETE"])
 def del_measurement(measurement_id):
+    """
+    Delete measurement by id
+    :param measurement_id: id
+    :return: bool
+    """
     elem = list(filter(lambda t: t['id'] == measurement_id, measurements))
     if len(elem) == 0:
         return jsonify({"error": "not found"}), 404
