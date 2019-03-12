@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module api</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>api</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/zeusfsx/edu/AC/lab1/api.py">/home/zeusfsx/edu/AC/lab1/api.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="arrow.html">arrow</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-add_measurement"><strong>add_measurement</strong></a>()</dt><dd><tt>This&nbsp;function&nbsp;add&nbsp;new&nbsp;measurement&nbsp;in&nbsp;db<br>
+:return:&nbsp;json&nbsp;with&nbsp;the&nbsp;measurement</tt></dd></dl>
+ <dl><dt><a name="-del_measurement"><strong>del_measurement</strong></a>(measurement_id)</dt><dd><tt>Delete&nbsp;measurement&nbsp;by&nbsp;id<br>
+:param&nbsp;measurement_id:&nbsp;id<br>
+:return:&nbsp;bool</tt></dd></dl>
+ <dl><dt><a name="-edit_measurement"><strong>edit_measurement</strong></a>(measurement_id)</dt><dd><tt>Edit&nbsp;measurement&nbsp;by&nbsp;id&nbsp;use<br>
+:param&nbsp;measurement_id:&nbsp;id&nbsp;of&nbsp;element&nbsp;measurement<br>
+:return:&nbsp;json&nbsp;with&nbsp;the&nbsp;measurement&nbsp;which&nbsp;was&nbsp;edit</tt></dd></dl>
+ <dl><dt><a name="-get_measurement"><strong>get_measurement</strong></a>(measurement_id)</dt><dd><tt>This&nbsp;function&nbsp;return&nbsp;measurement&nbsp;by&nbsp;id<br>
+First&nbsp;find&nbsp;a&nbsp;measurement&nbsp;make&nbsp;uri&nbsp;for&nbsp;id<br>
+and&nbsp;return&nbsp;json<br>
+:param&nbsp;measurement_id:&nbsp;id<br>
+:return:&nbsp;json</tt></dd></dl>
+ <dl><dt><a name="-get_measurements"><strong>get_measurements</strong></a>()</dt><dd><tt>This&nbsp;function&nbsp;return&nbsp;all&nbsp;measurements<br>
+0&nbsp;-&gt;&nbsp;<a href="http://127.0.0.1:5000/api/v0.1/measurement/0">http://127.0.0.1:5000/api/v0.1/measurement/0</a><br>
+:return:&nbsp;json&nbsp;with&nbsp;measurements</tt></dd></dl>
+ <dl><dt><a name="-make_public_task"><strong>make_public_task</strong></a>(task)</dt><dd><tt>Make&nbsp;from&nbsp;with&nbsp;id&nbsp;-&gt;&nbsp;uri<br>
+&nbsp;<br>
+:param&nbsp;task:<br>
+:return:</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>app</strong> = &lt;Flask 'api'&gt;<br>
+<strong>measurements</strong> = [{'date': '2019-03-10 17:50', 'diastolic': 80, 'id': 0, 'systolic': 120}, {'date': '2019-03-11 17:50', 'diastolic': 80, 'id': 1, 'systolic': 140}]<br>
+<strong>request</strong> = &lt;LocalProxy unbound&gt;</td></tr></table>
+</body></html>

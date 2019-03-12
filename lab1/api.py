@@ -20,6 +20,12 @@ measurements = [
 
 
 def make_public_task(task):
+    """
+    Make from with id -> uri
+
+    :param task:
+    :return:
+    """
     new_task = {}
     for field in task:
         if field == 'id':
@@ -33,6 +39,7 @@ def make_public_task(task):
 def get_measurements():
     """
     This function return all measurements
+    0 -> http://127.0.0.1:5000/api/v0.1/measurement/0
     :return: json with measurements
     """
     return jsonify({"measurements": [i for i in map(make_public_task, measurements)]})
